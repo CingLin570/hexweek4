@@ -1,0 +1,220 @@
+.wrap{
+    margin: 0 auto;
+}
+.header{
+    background: #AA0601;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .menu{
+        padding: 40px 0;
+        padding-right: 24px;
+        li{
+            padding-right: 64px;
+        }
+    }
+    h1{
+        background-image: url(../img/logo-new1.png);
+        background-repeat: no-repeat;
+        width: 80px;
+        height: 49px;
+        margin-left: 88px;
+        @include hide-text;
+    }
+    a{
+        color: #fff;
+    }
+    img{
+        display: none;
+    }
+    @include pad{
+        h1{
+            margin-left: 48px;
+        }
+    }
+    @include mobile{
+        justify-content: center;
+        padding: 10px 0;
+        .menu{
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            right: 0;
+            max-height: 0;
+            overflow: hidden;
+            z-index: 120;
+            text-align: center;
+            transition: max-height 0.8s;
+            padding: 0;
+            li{
+                line-height: 60px;
+                background-color:   #AA0601;
+                border-top: 1px solid #FFFFFF;
+                padding: 0;
+            }
+        }
+        h1{
+            margin: 0;
+        }
+        .icon-menu{
+            display: block;
+            position: absolute;
+            left: 16px;
+        }
+        .active{
+            max-height: 250px;
+        }
+    }
+}
+.footer{
+    background-color: #AA0601;
+    color: #fff;
+.footer-contain{
+    margin: 0 auto;
+    max-width: 1200px;
+    .footer-header{
+        flex-direction: column;
+    }
+    .footer-menu{
+        justify-content: space-between;
+        padding-top: 36px;
+        padding-bottom: 18px;
+        li{
+            padding-right: 48px;
+    }
+    .footer-socialMedia{
+        a{
+            margin-left: 32px;
+        }
+    }
+}
+    .footer-information{
+        font-size: 36px;
+        padding-bottom: 24px;
+        li{
+            margin-bottom: 16px;
+            align-items: center;
+    }
+        img{
+        margin-right: 24px;
+    }
+    
+}
+.footer-link{
+    margin:24px 0;
+    border-top:1px solid #fff;
+}
+.footer-copyright{
+    justify-content: space-between;
+    padding-bottom: 27.7px;
+    .copy-text{
+        padding-top: 14px;
+    }
+    ul{
+        padding-left: 460px;
+    }
+    li{
+        padding-left: 62px;
+    }
+    }
+}
+@include pad{
+    .footer-contain{
+        max-width: 672px;
+    .footer-menu{
+        li{
+            padding-right: 40px;
+        }
+    }  
+    .footer-copyright{
+        img{
+            display: none;
+        }
+    }
+    .footer-socialMedia{
+        a{  
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .copy-text{
+        ul{
+            padding-left: 176px;
+        }
+        li{
+            padding-left: 24px;
+            font-size: 14px;
+        }
+    }
+    .footer-information{
+        font-size: 20px;
+        padding-bottom: 0px;
+        
+        img{
+            width: 23px;
+            height: 23px;
+        }
+        li{
+            margin-bottom: 11px;
+        }
+    }
+}
+}
+@include mobile{
+    .footer-contain{
+        max-width: 352px;
+        .footer-header{
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        .footer-menu{
+            padding-top: 24px;
+            ul{
+                display: none;
+            }
+        .footer-socialMedia{
+            a{
+                margin-left: 24px;
+            }
+        }
+    }
+    .footer-information{
+        font-size: 16px;
+        padding-top: 24px;
+        padding-bottom: 0px;
+        img{
+            margin-right: 8px;
+            width: 16px;
+            height: 16px;
+        }
+        li{
+            margin-bottom: 8px;
+        }
+    }
+    .footer-copyright{
+        justify-content: start;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        .copy-text{
+            flex-direction: column;
+            ul{
+                flex-direction: column;
+                padding-left: 0px;
+            }
+            li{
+                padding-left: 0px;
+                padding-bottom: 8px;
+            }
+            
+        }
+        img{
+            display: block;
+            height: 27.93px;
+            width: 46px;
+        }
+    }
+
+}
+}
+}

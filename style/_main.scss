@@ -1,0 +1,692 @@
+.banner{
+    background-image: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 850px;
+    h1{
+        font-size: 64px;
+    }
+    h2{
+        font-size: 36px;
+    }
+    .banner-container{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-left: 12px;
+    padding-right: 12px;
+    .container-block{
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .container-title{
+        text-align: right;
+    }
+    }
+    @include pad{
+        background-image: url(../img/padbanner.png);
+        h1{
+            font-size: 48px;
+        }
+        h2{
+            font-size: 20px;
+        }
+    }
+    @include mobile{
+        background-image: url(../img/mobilebanner.png);
+        height: 394px;
+        h1{
+            font-size: 32px;
+        }
+        h2{
+            font-size: 16px;
+        }
+    }
+}
+.glasses{
+    background: #AA06010D;
+    align-items: center;
+    flex-direction: column;
+    h2{
+        font-size: 48px;
+        padding: 64px 0 60px 0;
+    }
+    .glasses-item{
+        max-width: 1200px;
+        justify-content: space-around;
+        text-align: center;
+        margin-bottom: 80px;
+        li{
+            width: 17.3333%;
+        }
+        img{
+            margin-bottom: 42.1px;
+            height: 100px;
+            width: 100px;
+        }
+        p{
+            color: #000;
+            font-weight: bold;
+            text-align: justify;
+        }
+        h3{
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+}
+    @include pad{
+        .glasses-item{
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            li{
+                width: 42.18%;
+            }
+            li:nth-of-type(1){
+                order:3;
+            }
+            li:nth-of-type(2){
+                order:1;
+            }
+            li:nth-of-type(3){
+                order:2;
+            }
+            li:nth-of-type(4){
+                order:4;
+            }
+        }
+    }
+    @include mobile{
+        margin-bottom: 24px;
+        .glasses-item{
+            li{
+                width: 93.86%;
+                padding: 0 76px;
+            }
+        }
+        h2{
+            font-size: 24px;
+        }
+    }
+}
+.product{
+    font-size: 48px;
+    .container{
+        flex-direction: column;
+        align-items: center;
+        .productitem{
+            margin-bottom: 80px;
+        }    
+        li{
+            margin-bottom: 32px;
+            h3{
+                font-style: italic;
+                align-items: center;
+                font-size: 48px;
+                font-weight: bolder;
+                margin-left: 24px;
+            }
+        }
+        li:last-child{
+            margin-bottom: 0;
+        }
+        li:nth-child(2) h3{
+            margin-right: 24px;
+        }
+        .img-hover{
+            position: relative;
+        }
+        .img-hover::before{
+            content: '';
+            background: url(../img/hover.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            background-size: contain;
+        }
+        .img-hover:hover::before{
+            opacity: 1;
+        }
+        li:nth-child(2) img{
+            width: 100%;
+        }
+        @include pad{
+            font-size: 32px;
+            h2{
+                margin-bottom: 32px;
+            }
+            .productitem{
+                margin-bottom: 40px;
+            }    
+            .productitem li{
+                margin-bottom: 8px;
+                margin-right: 6%;
+                margin-left: 6%;
+                img[alt="product-1"]{
+                    margin-right: 40px;
+                }
+            }
+            .productitem img,.img-hover{
+                width: 58%;
+            }
+            .productitem h3{
+                font-size: 36px;
+                justify-content: center;
+                margin-left: 38px;
+                img{
+                    margin-right: 8px;
+                }
+            }
+            .productitem li:nth-child(2){
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+            }
+            .productitem li:nth-child(2) h3{
+                margin-right: 0;
+            }             
+        }
+        @include mobile{
+            font-size:24px;
+            h2{
+                margin-bottom: 16px;
+            }
+            .productitem{
+                margin-bottom: 24px;
+            }    
+            .productitem li{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img[alt="product-1"]{
+                    margin-right: 0;
+                }
+                h3{
+                    color: #fff;
+                    position: absolute;
+                    margin-left: 0;
+                }
+                img,.img-hover{
+                    width: 100%;
+                }
+            }
+            .productitem li:nth-child(2){
+                justify-content: center;
+            }
+            .productitem li:nth-child(2) h3{
+                z-index: 1;
+            }
+        }
+    }
+}
+.glassesbg{
+    background:url(../img/glassesbg.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding-bottom: 479px;
+    color: #fff;
+    .glasses-design{
+        max-width: 1539px;
+    }
+    img{
+        display: block;
+    }
+    h2{
+        font-size: 48px;
+        text-align:center;
+        padding-top: 60px;
+        padding-bottom: 64px;
+    }
+    .mobile-design1{
+        display: none;
+    }
+    .mobile-design3{
+        display: none;
+    }
+    .design-more{
+        justify-content: flex-end;
+        position: relative;
+        margin-right: 84px;
+    }
+    .more-bg{
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        background: #FFF;
+        top: 12%;
+        bottom: 12%;
+        left: 70%;
+        right: 0;
+        margin-right: -84px;
+        // padding-right: -84px;
+        // transform: translateX(84px);
+        cursor: pointer;
+        span{
+            margin-right: 17px;
+        }
+        span::before{
+            content: 'MORE';
+            position: absolute;
+            transition: all 0.4s 0.3s;
+            transform: translateY(0px);
+        }
+        span::after{
+            content: 'MORE';
+            position: absolute;
+            transition: all 0.4s 0.3s;
+            transform: translateY(0px);
+        }
+        img{
+            transition: all 0.4s 0.3s;
+        }
+    }
+    .more-bg:hover img:last-child{
+        transform: translateX(15px);
+    }        
+    .more-bg:hover span::after{
+        transform: translateY(-145px);
+        opacity: 0.4;
+    }        
+    .more-bg:hover span::before{
+        transform: translateY(-85px);
+        opacity: 0.7;
+    }
+    .brand-item{
+        text-align: center;
+        position: relative;
+        span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            white-space: nowrap;
+            transform: translate(-50%,-50%);
+            z-index: 1;
+        }
+    }
+    .brand-item:first-child{
+            margin-right: 30px;
+    }
+    .brand-item::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(255,255,255,0.5);
+    }
+    @include pad{
+        padding-bottom: 449px;
+        h2{
+            font-size: 32px;
+        }
+        .glasses-design{
+            max-width: 672px;
+        }
+        .design-item1{
+            margin-right: 3px;
+        }
+        .design-item3{
+            margin-bottom: 3px;
+        }
+        .brand-item{
+            font-size: 32px;
+        }
+        .design-more{
+            max-height: 77px;
+            max-width: 147px;
+            margin-left: 166px;
+            margin-right: 0px;
+        }
+        .more-bg{
+        left: 15%;
+        margin-right: -41px;
+        span{
+            font-size: 40px;
+            margin-right: 10px;
+        }
+        img{
+            max-width: 27px;
+            max-height: 27px;
+        }
+    }
+    .more-bg:hover img:last-child{
+        transform: translateX(10px);
+    }
+        .more-bg:hover span::after{
+        transform: translateY(-80px);
+    }
+        .more-bg:hover span::before{
+        transform: translateY(-40px);
+    }
+}
+    @include mobile{
+        padding-bottom: 254px;
+        h2{
+            font-size: 24px;
+            padding-top: 24px;
+            padding-bottom: 16px;
+        }
+        .glasses-design{
+            max-width: 327px;
+        }
+        .glasses-footer{
+            flex-direction: column;
+        }
+        .brand-item:first-child{
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
+        .glasses-content{
+            margin-bottom: 20px;
+        }
+        .design-item1{
+            width: 49%;
+        }
+        .design-item2{
+            width: 51%;
+        }
+        .mobile-design1{
+            margin-top: 2px;
+            display: block;
+        }
+        .mobile-design2{
+            display: none;
+        }
+        .mobile-design3{
+            display: block;
+            margin-right: 2px;
+            img{
+                max-width: 37.7px;
+            }
+        }
+        .mobile-design4{
+            display: none;
+        }
+        .more{
+            display: flex;
+        }
+        .design-more{
+            margin-top: 28px;
+            max-width: 102px;
+            max-height: 53px;
+            margin-left: 0px;
+    }
+    .more-bg{
+        left: 12%;
+        margin-right: -23.5px;
+        span{
+            font-size: 26px;
+        }
+        img{
+            max-width: 18px;
+            max-height: 18px;
+        }
+    }
+    }
+}
+    .recommend{
+        text-align: center;
+        margin-top: -332px;
+        .recommend-item{
+        padding: 16px;
+        border-bottom: 1px solid #DEE2E6;
+        border-left: 1px solid #DEE2E6;
+        border-right: 1px solid #DEE2E6;
+        background: #fff;
+        }
+        .recommend-content{
+            justify-content: space-between;
+            margin-bottom: 80px;
+        }
+        h2{
+            margin-bottom: 60px;
+        }
+        h3{
+            margin-bottom: 16px;
+            text-align: left;
+        }
+        p{
+            text-align: left;
+            padding-bottom: 16px;
+        }
+        li{
+            max-width: 282px;
+        }
+        img{
+            display: block;
+        }
+        @include pad{
+            max-width: 672px;
+            margin-top: -418px;
+            h2{
+                font-size: 32px;
+                margin-bottom: 32px;
+            }
+            .recommend-content{
+                flex-wrap: wrap;
+                margin-bottom: 16px;
+                li{
+                    margin-bottom: 24px;
+                }
+            }
+        }
+        @include mobile{
+            max-width: 352px;
+            margin-top: -235px;
+            li{
+                max-width: 352px;
+            }
+            h2{
+                font-size: 24px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+    .contact{
+        background: #AA06010D;
+        font-weight: bold;
+        .contact-content{
+            margin: 0 auto;
+            max-width: 792px;
+        }
+        h2{
+            text-align: center;
+            padding-top: 64px;
+            padding-bottom: 24px; 
+        }
+        p{
+            margin-bottom: 20px;
+        }
+        form{
+            label{
+                display: block;
+                margin-bottom: 4px;
+            }
+            .input{
+                width: 100%;
+                padding: 15px 0 15px 16px;
+                margin-bottom: 16px;
+                background: transparent;
+                border: 1px solid #000;
+            }
+            textarea{
+                width: 100%;
+                resize: none;
+                background: transparent;
+                padding: 14px 0 100px 16px;
+                border: 1px solid #000;
+                margin-bottom: 16px;
+            }
+        }
+        .agree{
+            margin-bottom: 58px;
+            input{
+                display: none;
+            }
+        }
+        .agreebtn:checked + .agree-text::before{
+            background: url(../img/check.png);
+            background-size: 15px auto;
+        }
+        .agree-text::before{
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000;
+            display: inline-block;
+            transform: translateY(4px);
+            margin-right: 4px;
+        }
+        .submit{
+            text-align: center;
+            padding-bottom: 92px;
+            input{
+                width: 180px;
+                height: 54px;
+                background: #AA0601;
+                border: none;
+                font-weight: bold;
+            }
+            input:hover{
+                background: #650300;
+            }
+        }
+        @include pad{
+            .contact-content{
+                max-width: 496px;
+                h2{
+                    font-size: 32px;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+            .submit{
+                padding-bottom: 56px;
+                    input{
+                        width: 136px;
+                        height: 36px;
+                    }
+                }
+        }
+        @include mobile{
+            .contact-content{
+                max-width: 327px;
+                h2{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+// 常見問題
+.problem{
+    background: url(../img/problem.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 302px;
+    margin-bottom: 88px;
+
+    .problem-content{
+    padding-top: 214px;
+    align-items: center;
+    }
+    h2{
+        padding-right: 8px;
+    }
+    @include pad{
+        background: url(../img/problemmobile.png);
+        background-position: center center;
+        background-size: cover;
+        h2{
+            font-size: 48px;
+        }
+        .problem-content{
+            max-width:672px;
+            padding-top: 237px;
+        }
+        margin-bottom: 40px;
+    }
+    @include mobile{
+        height: 143px;
+        h2{
+            font-size: 28px;
+        }
+        .problem-content{
+            max-width: 352px;
+            padding-top: 103px;
+            img{
+                height: 24px;
+                width: 24px;
+            }
+        }
+    }
+}
+.askquestion{
+    h3{
+        margin-bottom: 16px;
+    }
+    .card{
+        margin-bottom: 156px;
+    }
+    .card-item-header{
+        border: 1px solid #000;
+        a{
+            color: #000;
+            font-weight: bold;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 38px;
+        }
+    }
+    .card-item-body{
+        padding: 22px 246px 22px 38px;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+    }
+    .card-item:not(.active) .up{
+        display: none;
+    }
+    .card-item.active .down{
+        display: none;
+    }
+    @include pad{
+        max-width: 672px;
+        h3{
+            margin-bottom: 32px;
+        }
+        .card{
+            margin-bottom: 104px;
+        }
+        p{
+            font-size: 14px;
+        }
+        .card-item-body{
+            padding: 16px 24px;
+        }
+    }
+    @include mobile{
+        max-width: 352px;
+        h3{
+            font-size: 20px;
+        }
+        .card{
+            margin-bottom: 56px;
+        }
+        .card-item-header{
+            a{
+                font-size: 16px;
+                padding: 16px;
+            }
+        }
+
+        .card-item-body{
+            padding: 16px;
+        }
+    }
+}
+
